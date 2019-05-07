@@ -5,10 +5,12 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GraphQL.Authorization.AspNetCore", "GraphQL.Authorization.AspNetCore\GraphQL.Authorization.AspNetCore.csproj", "{895470F1-3E7F-4B37-8E45-88FFAF9FDFF0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{386A0071-2C92-4E87-A167-DE9108A4DC0D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{386A0071-2C92-4E87-A167-DE9108A4DC0D}"
 	ProjectSection(SolutionItems) = preProject
 		..\README.md = ..\README.md
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DF2CEBF8-D67A-4040-B706-1190F86B8B7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{895470F1-3E7F-4B37-8E45-88FFAF9FDFF0} = {DF2CEBF8-D67A-4040-B706-1190F86B8B7F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {91183EAE-4D99-4120-A5CC-647E55D4266C}
