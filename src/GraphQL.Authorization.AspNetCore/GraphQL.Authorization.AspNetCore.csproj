@@ -8,8 +8,8 @@
     <AssemblyName>GraphQL.Authorization.AspNetCore</AssemblyName>
     <PackageId>GraphQL.Authorization.AspNetCore</PackageId>
     <PackageTags>GraphQL;Authorization;json;api</PackageTags>
-    <PackageProjectUrl>https://github.com/littlesmilelove/authorization-aspnetcore</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/littlesmilelove/authorization-aspnetcore/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/littlesmilelove/graphql-authorization-aspnetcore</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/littlesmilelove/graphql-authorization-aspnetcore/blob/master/LICENSE.md</PackageLicenseUrl>
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
