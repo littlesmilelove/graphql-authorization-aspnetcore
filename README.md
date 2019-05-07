@@ -12,6 +12,7 @@ This project is base on [GraphQL .Net Authorization](https://github.com/graphql-
 
 # Examples
 
+Define UserContext.
 ```csharp
 public class GraphQLUserContext : IProvideClaimsPrincipal
 {
@@ -26,7 +27,7 @@ services.AddGraphQLAuth();
 services.AddGraphQL(options =>
 {
     options.ExposeExceptions = true;
-}).AddUserContextBuilder(context => new GraphQLUserContext { Usercontext.User });
+}).AddUserContextBuilder(context => new GraphQLUserContext { User = context.User });
 ```
 
 GraphType first syntax - use `AuthorizeWith`.
