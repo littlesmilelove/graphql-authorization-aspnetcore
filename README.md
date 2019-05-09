@@ -30,6 +30,14 @@ services.AddGraphQL(options =>
 }).AddUserContextBuilder(context => new GraphQLUserContext { User = context.User });
 ```
 
+Define a policy.
+```csharp
+services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminPolicy", policy => policy.RequireClaim("Admin");
+});
+```
+
 GraphType first syntax - use `AuthorizeWith`.
 
 ```csharp
