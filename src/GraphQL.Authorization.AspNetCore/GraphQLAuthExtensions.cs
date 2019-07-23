@@ -9,7 +9,7 @@ namespace GraphQL.Authorization.AspNetCore
     {
         public static void AddGraphQLAuth(this IServiceCollection services)
         {
-            services.TryAddSingleton<IAuthorizationEvaluator, AuthorizationEvaluator>();
+            services.TryAddScoped<IAuthorizationEvaluator, AuthorizationEvaluator>();
             services.AddTransient<IValidationRule, AuthorizationValidationRule>();
         }
     }
