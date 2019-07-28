@@ -7,9 +7,11 @@ namespace GraphQL.Authorization.AspNetCore
 {
     public static class GraphQLAuthExtensions
     {
-        public static void AddGraphQLAuth(this IServiceCollection services)
+        public static void AddGraphQLAuth(this IServiceCollection services, ServiceLifetime lifetime = ServiceLifetime.Singleton)
         {
-            services.TryAddSingleton<IAuthorizationEvaluator, AuthorizationEvaluator>();
+            var authorizationEvaluatorDescriptor = ServiceDescriptor.Describe(typeof(IAuthorizationEvaluator), typeof(AuthorizationEvaluator), lifetime);
+            services.TryAdd(authorizationEvaluatorDescriptor);
+
             services.AddTransient<IValidationRule, AuthorizationValidationRule>();
         }
     }
