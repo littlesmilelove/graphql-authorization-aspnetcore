@@ -23,18 +23,18 @@ namespace GraphQL.Authorization.AspNetCore
             Dictionary<string, object> arguments,
             IAuthorizationEvaluator evaluator)
         {
-            var list = type.GetPolicies();
-            return evaluator.Evaluate(principal, userContext, arguments, list);
+            var policies = type.GetPolicies();
+            return evaluator.Evaluate(principal, userContext, arguments, policies);
         }
 
         public static void AuthorizeWith(this IProvideMetadata type, string policy)
         {
-            var list = type.GetPolicies();
-            if (!list.Contains(policy))
+            var policies = type.GetPolicies();
+            if (!policies.Contains(policy))
             {
-                list.Add(policy);
+                policies.Add(policy);
             }
-            type.Metadata[PolicyKey] = list;
+            type.Metadata[PolicyKey] = policies;
         }
 
         public static FieldBuilder<TSourceType, TReturnType> AuthorizeWith<TSourceType, TReturnType>(
