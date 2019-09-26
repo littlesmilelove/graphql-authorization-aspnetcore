@@ -5,6 +5,11 @@ namespace GraphQL.Authorization.AspNetCore
 {
     public class GraphQLAuthorizeAttribute : GraphQLAttribute
     {
+        public GraphQLAuthorizeAttribute(string policy)
+        {
+            Policy = policy;
+        }
+
         public string Policy { get; set; }
 
         public override void Modify(TypeConfig type)

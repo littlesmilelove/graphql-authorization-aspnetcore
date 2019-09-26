@@ -6,6 +6,13 @@ namespace GraphQL.Authorization.AspNetCore
 {
     public class AuthorizationContext
     {
+        public AuthorizationContext(ClaimsPrincipal user, object userContext, Dictionary<string, object> arguments)
+        {
+            User = user;
+            UserContext = userContext;
+            Arguments = arguments ?? new Dictionary<string, object>();
+        }
+
         private readonly List<string> _errors = new List<string>();
 
         public ClaimsPrincipal User { get; set; }

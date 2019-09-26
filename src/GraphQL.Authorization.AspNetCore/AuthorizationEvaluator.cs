@@ -28,10 +28,8 @@ namespace GraphQL.Authorization.AspNetCore
             Dictionary<string, object> arguments,
             IEnumerable<string> requiredPolicies)
         {
-            var context = new AuthorizationContext();
-            context.User = principal ?? new ClaimsPrincipal(new ClaimsIdentity());
-            context.UserContext = userContext;
-            context.Arguments = arguments;
+            var user = principal ?? new ClaimsPrincipal(new ClaimsIdentity());
+            var context = new AuthorizationContext(user, userContext, arguments);
 
             var tasks = new List<Task>();
 

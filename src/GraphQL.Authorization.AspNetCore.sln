@@ -12,6 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{386A0071-2C9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DF2CEBF8-D67A-4040-B706-1190F86B8B7F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ci", "ci", "{2D81D5CA-D188-490D-A4D4-5E5CB4CE02AE}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\netcore.yml = ..\.github\workflows\netcore.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

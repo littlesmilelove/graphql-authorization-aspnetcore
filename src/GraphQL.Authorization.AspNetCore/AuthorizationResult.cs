@@ -6,7 +6,7 @@ namespace GraphQL.Authorization.AspNetCore
     {
         public bool Succeeded { get; private set; }
 
-        public IEnumerable<string> Errors { get; private set; }
+        public IEnumerable<string>? Errors { get; private set; }
 
         public static AuthorizationResult Success()
         {

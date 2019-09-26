@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using GraphQL.Language.AST;
 using GraphQL.Types;
@@ -16,7 +17,10 @@ namespace GraphQL.Authorization.AspNetCore
 
         public INodeVisitor Validate(ValidationContext context)
         {
-            var userContext = context.UserContext as IProvideClaimsPrincipal;
+            if (!(context.UserContext is IProvideClaimsPrincipal userContext))
+            {
+                throw new NotSupportedException("The user context is not valid.");
+            }
 
             return new EnterLeaveListener(_ =>
             {
@@ -69,13 +73,13 @@ namespace GraphQL.Authorization.AspNetCore
             if (type == null || !type.RequiresAuthorization()) return;
 
             var result = type
-                .Authorize(userContext?.User, context.UserContext, context.Inputs, _evaluator)
+                .Authorize(userContext.User, context.UserContext, context.Inputs, _evaluator)
                 .GetAwaiter()
                 .GetResult();
 
             if (result.Succeeded) return;
 
-            var errors = string.Join("\n", result.Errors);
+            var errors = string.Join("\n", result.Errors!);
 
             context.ReportError(new ValidationError(
                 context.OriginalQuery,
