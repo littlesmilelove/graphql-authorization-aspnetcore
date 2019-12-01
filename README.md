@@ -64,3 +64,6 @@ public class MutationType
     }
 }
 ```
+
+# .Net Core 3.0
+New version only surpport .net core 3.0, it surpport `Nullable Reference Types`.

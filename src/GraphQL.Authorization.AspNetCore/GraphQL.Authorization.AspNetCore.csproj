@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <Description>A toolset for Asp.net core authorizing integrate to graph types for GraphQL .NET</Description>
-    <VersionPrefix>1.0</VersionPrefix>
+    <VersionPrefix>1.1.0</VersionPrefix>
     <Authors>Little Smilelove</Authors>
     <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
     <AssemblyName>GraphQL.Authorization.AspNetCore</AssemblyName>
     <PackageId>GraphQL.Authorization.AspNetCore</PackageId>
     <PackageTags>GraphQL;Authorization;json;api</PackageTags>
     <PackageProjectUrl>https://github.com/littlesmilelove/graphql-authorization-aspnetcore</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/littlesmilelove/graphql-authorization-aspnetcore/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
     <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
@@ -18,6 +18,9 @@
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/littlesmilelove/graphql-authorization-aspnetcore</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
